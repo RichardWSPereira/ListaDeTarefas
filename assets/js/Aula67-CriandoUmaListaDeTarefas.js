@@ -69,6 +69,8 @@ function getTasks(){
 
     function addSavedTasks() {
         const savedTasks = localStorage.getItem('listaTarefa');
+        if (!savedTasks) return;
+
         const listTasks = JSON.parse(savedTasks);
 
         for (let tarefa of listTasks) {
